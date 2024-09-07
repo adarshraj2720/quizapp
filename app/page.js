@@ -134,7 +134,7 @@ export default async function Home() {
           <div>
             <div class="grid lg:grid-cols-5 gap-5 md:grid-cols-1 mx-4">
               {Computerdata.map((item, i) => (
-                <div onClick={()=>router.push("/countdown")} style={{outline:"1px solid grey"}} className="cursor-pointer relative bg-[#fff] dark:bg-slate600 rounded-lg dark:border-0 border  border-gray-300 ">
+                <div key={i} onClick={()=>router.push("/countdown")} style={{outline:"1px solid grey"}} className="cursor-pointer relative bg-[#fff] dark:bg-slate600 rounded-lg dark:border-0 border  border-gray-300 ">
                   <img className="scaleanimation" style={{borderTopLeftRadius:"8px", borderTopRightRadius:"8px"}} src={item.img} />
                   
                     <span style={{bottom:"30%",left:"4%"}}  className="text-white bg-black p-1 rounded-lg absolute">{item.question + " Qs"}</span>
