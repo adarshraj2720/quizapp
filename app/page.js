@@ -1,100 +1,176 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { useRouter } from 'next/navigation';
+export default async function Home() {
+
+  const router = useRouter();
+  const Computerdata = [
+    {
+      name: "Computer Basic Quiz 1",
+      question: "10",
+      number: 69,
+      img: "https://quizard.app/images/ScienceQuiz.png",
+    },
+    {
+      name: "Computer Basic Quiz 1",
+
+      question: "10",
+
+      number: 34,
+      img: "https://quizard.app/images/ScienceQuiz.png",
+    },
+    {
+      name: "Computer Basic Quiz 1",
+
+      question: "10",
+
+      number: 92,
+      img: "https://quizard.app/images/ScienceQuiz.png",
+    },
+    {
+      name: "Computer Basic Quiz 1",
+
+      question: "10",
+
+      number: 26,
+      img: "https://quizard.app/images/ScienceQuiz.png",
+    },
+    {
+      name: "Computer Basic Quiz 1",
+
+      question: "10",
+
+      number: 50,
+      img: "https://quizard.app/images/ScienceQuiz.png",
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div>
+      <nav
+        style={{ backgroundColor: "#06B6D4" }}
+        id="navbar"
+        className="navbar flex items-center justify-between pt-4 pb-4 pr-8 pl-8"
+      >
+        <h1 className="font-bold text-4xl" style={{ color: "#FFFF00" }}>
+          Quizard
+        </h1>
+        <div className="flex items-start">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <ul className="flex text-xl flex-wrap">
+          <li style={{ color: "#FFFF00" }} className="mr-6">
+            Live Quiz
+          </li>
+          <li style={{ color: "#FFFF00" }} className="mr-6">
+            Profile
+          </li>
+          <li style={{ color: "#FFFF00" }} className="mr-6">
+            DEFAULT
+          </li>
+          <li style={{ color: "#FFFF00" }} className="mr-6">
+            Logut
+          </li>
+          
+        </ul>
+        <div style={{backgroundColor:"#0084AF"}} className="flex  px-4 py-2 rounded-3xl">
+          
+          <img
+            height={"20px"}
+            width={"20px"}
+            src="https://quizard.app//images/coin.png"
+          />
+          <span style={{ color: "#FACC19", marginLeft: "10px" }}>0</span>
         </div>
+        </div>
+        
+      </nav>
+      <main>
+        <section
+          style={{ backgroundColor: "#06B6D4", height: "80vh" }}
+          className=" flex justify-center"
+        >
+          <div className="w-1/2 m-auto flex justify-center">
+            <img width={"50%"} src={"https://quizard.app/images/kid.png"} />
+          </div>
+          <div className="w-1/2 m-auto flex flex-col items-center">
+            <h3 className="text-white text-6xl ">Play Quiz</h3>
+            <p className="text-white   mt-3 text-xl     lg:w-96">
+              Welcome to Quizard, where knowledge meets fun! Unleash your
+              intellect with our captivating quizzes spanning various topics.
+              Challenge yourself, compete with friends, and embark on a journey
+              of discovery. Engage in brain-teasing trivia that entertains and
+              educates. Quizard - Where every question unlocks a world of
+              possibilities!
+            </p>
+          </div>
+        </section>
+        <section
+          style={{ backgroundColor: "#06B6D4" }}
+          className="pt-6 pb-6 m-10 rounded-lg flex justify-center"
+        >
+          <div
+            style={{ border: "2px solid #FACC15", width: "36%" }}
+            className="rounded-2xl px-2 py-4 flex justify-center"
+          >
+            <input
+              placeholder="Enter Game Code"
+              className="rounded-lg h-full w-3/5 pl-4   mr-4"
+            ></input>
+            <button
+              style={{ backgroundColor: "#2C2C2C", color: "#C2BCAD" }}
+              className="px-9 py-3 rounded-lg"
+            >
+              Join Game
+            </button>
+          </div>
+        </section>
+
+        <section className="mx-10 my-10">
+          <div className="flex justify-between my-4">
+            <h2 className="text-3xl">Computer</h2>
+            <button className=" py-1 px-4 rounded-lg" style={{fontSize:"18px",fontWeight:"500", backgroundColor:"#CCE6EF",color:"#0086B1"}} >View More</button>
+          </div>
+          <div>
+            <div class="grid lg:grid-cols-5 gap-5 md:grid-cols-1 mx-4">
+              {Computerdata.map((item, i) => (
+                <div onClick={()=>router.push("/countdown")} style={{outline:"1px solid grey"}} className="cursor-pointer relative bg-[#fff] dark:bg-slate600 rounded-lg dark:border-0 border  border-gray-300 ">
+                  <img className="scaleanimation" style={{borderTopLeftRadius:"8px", borderTopRightRadius:"8px"}} src={item.img} />
+                  
+                    <span style={{bottom:"30%",left:"4%"}}  className="text-white bg-black p-1 rounded-lg absolute">{item.question + " Qs"}</span>
+                      
+                    <span style={{bottom:"30%", right:"4%"}} className="text-white bg-black p-1 rounded-lg absolute">{item.number + " Plays"}</span>
+                       
+                
+                    <p className="p-4 font-thin">{item.name}</p>
+                  
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="text-sm text-white px-8 py-4 flex justify-between" style={{backgroundColor:"#06B6D4"}}>
+        <span>
+          Quizard &#169; Copyright 2024, All right reserved.
+        </span>
+        <ul className="flex cursor-pointer">
+          <li className="me-2">
+            About Us
+          </li>
+          <li className="me-2">
+            Contact Us
+          </li>
+          <li className="me-2">
+            Privacy & Cookies Policy
+          </li>
+          <li className="me-2">
+            Terms and Conditions
+          </li>
+          <li>
+            Disclamier
+          </li>
+        </ul>
       </footer>
     </div>
   );
