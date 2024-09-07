@@ -207,11 +207,11 @@ const Quiz = () => {
         
          <h2 className="text-3xl py-4 flex items-center" style={{color:"#FACC15",margin: "0 auto",width:"60%"}}><FaArrowLeft onClick={()=>router.push("/")} className="me-2 cursor-pointer"/>Computer Basic Quiz-1</h2>
          <section
-           className="rounded-lg px-4 py-2   "
+           className="rounded-lg px-4 py-2  lg:w-3/5 sm:w-4/5 lg:h-screen sm:h-svh "
            style={{
              backgroundColor: "#193037",
              color: "white",
-             width: "60%",
+           
              margin: "0 auto",
              //   textAlign: "center",
            }}
