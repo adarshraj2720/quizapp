@@ -37,3 +37,38 @@ body {
     text-wrap: balance;
   }
 }
+
+.navbar {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Start with a transparent background */
+  transition: background-color 0.3s ease;
+  padding: 20px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+   /* Optional shadow */
+}
+
+.navbar.scrolled {
+  background-color: #22D3EE; /* Change to desired background color */
+}
+.footernav{
+  display: flex;
+}
+
+@media screen and (max-width: 680px) {
+  .content{
+    padding-top: 100px;
+  }
+  .navbarlisting  {
+    display: none;
+  }
+  .footerlink{
+    width: 100%;
+  }
+  .footernav{
+    display: block;
+  }
+}

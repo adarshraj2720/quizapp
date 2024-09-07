@@ -158,7 +158,7 @@ const Quiz = () => {
         </h2>
         <div className="flex">
 
-        <ul className="flex text-xl flex-wrap">
+        <ul className="flex text-xl flex-wrap navbarlisting">
           <li style={{ color: "#FFFF00" }} className="mr-6">
             Live Quiz
           </li>
@@ -381,10 +381,10 @@ const Quiz = () => {
           </section>
        </section>
         ) : (
-          <div className="rounded-lg px-10 pb-16"
+          <div className="rounded-lg px-10 pb-16 lg:w-3/5 sm:w-4/5 lg:h-screen sm:h-svh"
             style={{
               backgroundColor: "#193037",
-              width: "60%",
+              
               margin: "0 auto",
               textAlign: "center",
             }}
